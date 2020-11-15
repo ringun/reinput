@@ -14,11 +14,6 @@ export const container = ({ top, translateY, scale }) => ({
 
 export const label = (props = {}) => {
   var color = props.labelColor
-  if (props.error) {
-    color = props.errorColor
-  } else if (props.focused) {
-    color = props.labelActiveColor || props.activeColor || BLUE
-  }
 
   return {
     ...pick(props, [

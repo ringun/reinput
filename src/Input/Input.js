@@ -102,7 +102,7 @@ export default class ReinputInput extends React.Component {
               onFocus={this.handleFocus}
               placeholder={undefined}
               ref={this.register}
-              style={styles.input(this.props, this.state.height, hasValue)}
+              style={{...styles.input(this.props, this.state.height, hasValue), ...( this.props.inputStyle ? this.props.inputStyle : {})}}
               underlineColorAndroid='transparent'
               value={value}
             />
